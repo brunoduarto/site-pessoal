@@ -15,6 +15,15 @@
   <meta name="description" content="Arquiteto e Urbanista formado pela Universidade Federal de Viçosa, com experiência em projetos residenciais, comerciais e urbanísticos. Especializado em design sustentável e soluções criativas para espaços urbanos.">
   <meta name="keywords" content="Bruno Duarte, Arquiteto, Urbanista, Arquitetura Sustentável, Design de Interiores, Projetos Residenciais, Projetos Comerciais, Viçosa-MG" />
   <link rel="stylesheet" href="index.css" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXXXXXX-X');
+  </script>
 </head>
 
 <body>
@@ -153,6 +162,7 @@
           <img src="./images/fastlane.png" class="client__logo" alt="Company 3" />
           <img src="./images/chippy.png" class="client__logo" alt="Company 1" />
         </div>
+        <p>Veja como posso ajudar sua empresa. <a href="#contact" class="btn btn--pink">Vamos conversar!</a></p>
       </div>
     </section>
 
@@ -163,19 +173,22 @@
         <h2>Sobre Mim</h2>
         <div class="about__content">
           <div class="about__text">
-            <!-- Updated "About Me" text based on your LinkedIn profile -->
+            <!-- Updated "About Me" text based on LinkedIn profile -->
             <p>
-              Sou Arquiteto e Urbanista formado pela Universidade Federal de Viçosa, com experiência em projetos residenciais, comerciais e urbanísticos. Minha paixão é criar espaços funcionais, sustentáveis e esteticamente agradáveis, sempre buscando soluções criativas para os desafios do design e do planejamento urbano.
+              Sou Arquiteto e Urbanista formado pela Universidade Federal de Viçosa, com mais de 5 anos de experiência em projetos residenciais, comerciais e urbanísticos. Atualmente, atuo como Arquiteto de Projetos na Construtora Laguna, onde lidero equipes no desenvolvimento de projetos de alto padrão, desde a concepção até a execução.
             </p>
             <p>
-              Ao longo da minha carreira, trabalhei em diversos projetos, desde pequenas reformas até grandes empreendimentos comerciais. Meu objetivo é transformar ideias em realidade, sempre com foco na satisfação do cliente e no respeito ao meio ambiente.
+              Minha trajetória inclui passagens por empresas como a MRV Engenharia, onde trabalhei como Estagiário de Arquitetura, e a Prefeitura Municipal de Viçosa, onde participei de projetos de planejamento urbano e revitalização de espaços públicos. Tenho expertise em softwares como AutoCAD, SketchUp, Revit e Lumion, além de experiência em gestão de projetos e coordenação de equipes.
             </p>
-            <!-- Provide a link to your resume -->
-            <a href="#" class="btn">Meu Currículo</a>
+            <p>
+              Meu objetivo é criar soluções arquitetônicas que unam funcionalidade, estética e sustentabilidade, sempre com foco na satisfação do cliente e no respeito ao meio ambiente.
+            </p>
+            <a href="https://github.com/brunoduarto/site-pessoal/blob/master/Curriculum%20Vitae%20-%20Bruno%20Duarte.pdf" class="btn" target="_blank">Meu Currículo</a>
+            <p>Gostaria de trabalhar comigo? <a href="#contact" class="btn btn--pink">Entre em contato!</a></p>
           </div>
 
           <div class="about__photo-container">
-            <!-- Replace the Google Photos link with a local image file -->
+            <!-- Square-cropped profile photo -->
             <img class="about__photo" src="./images/foto_de_perfil.jpg" alt="Bruno Duarte de Oliveira" />
           </div>
         </div>
@@ -191,7 +204,19 @@
           <p>
             Está procurando um arquiteto para transformar sua visão em realidade? Ou precisa de consultoria para um projeto? Sinta-se à vontade para entrar em contato comigo. Farei o possível para responder o mais rápido possível. 😊
           </p>
-          <!-- Updated email and WhatsApp links -->
+          <form action="https://formspree.io/f/your-form-id" method="POST" class="contact__form">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit" class="btn btn--pink">Enviar Mensagem</button>
+          </form>
+          <p>Ou entre em contato diretamente:</p>
           <a href="mailto:brunoduarto@gmail.com" class="btn">brunoduarto@gmail.com</a>
           <a href="https://wa.me/5531987760114" class="btn">WhatsApp: 31 98776-0114</a>
         </div>
@@ -202,33 +227,32 @@
 
     <footer role="contentinfo" class="footer">
       <div class="row">
-        <!-- Updated social media links -->
         <ul class="footer__social-links">
           <li class="footer__social-link-item">
-            <a href="https://www.linkedin.com/in/bruno-duarte-deoliveira/" title="Link to LinkedIn Profile">
+            <a href="https://www.linkedin.com/in/bruno-duarte-deoliveira/" aria-label="LinkedIn Profile">
               <img src="./images/linkedin.svg" class="footer__social-image" alt="LinkedIn">
             </a>
           </li>
           <li class="footer__social-link-item">
-            <a href="https://www.instagram.com/bruno.arq.br/" title="Link to Instagram Profile">
+            <a href="https://www.instagram.com/bruno.arq.br/" aria-label="Instagram Profile">
               <img src="./images/instagram.svg" class="footer__social-image" alt="Instagram">
             </a>
           </li>
           <li class="footer__social-link-item">
-            <a href="https://www.behance.net/nobruteduar" title="Link to Behance Profile">
+            <a href="https://www.behance.net/nobruteduar" aria-label="Behance Profile">
               <img src="./images/behance.svg" class="footer__social-image" alt="Behance">
             </a>
           </li>
         </ul>
 
-        <!-- Updated footer text -->
         <p>
           &copy; 2025 - Desenvolvido por Bruno Duarte.
+          <a href="/privacy-policy" class="footer__link">Política de Privacidade</a>
         </p>
         <div class="footer__github-buttons">
           <iframe
-            src="https://ghbtns.com/github-btn.html?user=brunoduarto&repo=site-pessoal&type=watch&count=true"
-            frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
+            src="https://ghbtns.com/github-btn.html?user=brunoduarto&type=follow&count=true"
+            frameborder="0" scrolling="0" width="170" height="20" title="Follow Bruno Duarto on GitHub">
           </iframe>
         </div>
       </div>
