@@ -441,8 +441,11 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 
 .work__box {
-    display: flex;
-    align-items: center;
+    display: none;
+}
+
+.work__box.active {
+    display: block;
 }
 
 @media(max-width: 900px) {
