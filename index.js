@@ -9,7 +9,6 @@ const handleFirstTab = (e) => {
     window.removeEventListener('keydown', handleFirstTab)
     window.addEventListener('mousedown', handleMouseDownOnce)
   }
-
 }
 
 const handleMouseDownOnce = () => {
@@ -40,16 +39,13 @@ window.addEventListener("scroll", () => {
     isBackToTopRendered = false;
     alterStyles(isBackToTopRendered);
   }
-
+});
 
 /* -----------------------------------------
   Carrossel 
  ---------------------------------------- */
 
-
 const slides = document.querySelectorAll(".work__box");
-const prevButton = document.querySelector(".carousel__button--prev");
-const nextButton = document.querySelector(".carousel__button--next");
 let currentSlide = 0;
 
 // Function to show a specific slide
@@ -59,22 +55,19 @@ function showSlide(index) {
   });
 }
 
-// Function to move to the next slide
-function nextSlide() {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
+// Function to update the slide based on scroll position
+function updateSlideOnScroll() {
+  const scrollPosition = window.scrollY;
+  const slideHeight = window.innerHeight;
+  const newSlideIndex = Math.floor(scrollPosition / slideHeight) % slides.length;
+  if (newSlideIndex !== currentSlide) {
+    currentSlide = newSlideIndex;
+    showSlide(currentSlide);
+  }
 }
 
-// Function to move to the previous slide
-function prevSlide() {
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-  showSlide(currentSlide);
-}
-
-// Event listeners for navigation buttons
-prevButton.addEventListener("click", prevSlide);
-nextButton.addEventListener("click", nextSlide);
+// Event listener for scroll event
+window.addEventListener("scroll", updateSlideOnScroll);
 
 // Show the first slide initially
 showSlide(currentSlide);
-});
