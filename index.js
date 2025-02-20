@@ -40,4 +40,42 @@ window.addEventListener("scroll", () => {
     isBackToTopRendered = false;
     alterStyles(isBackToTopRendered);
   }
+
+
+/* -----------------------------------------
+  Carrossel 
+ ---------------------------------------- */
+
+
+const slides = document.querySelectorAll(".work__box");
+const prevButton = document.querySelector(".carousel__button--prev");
+const nextButton = document.querySelector(".carousel__button--next");
+let currentSlide = 0;
+
+// Function to show a specific slide
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle("active", i === index);
+  });
+}
+
+// Function to move to the next slide
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Function to move to the previous slide
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Event listeners for navigation buttons
+prevButton.addEventListener("click", prevSlide);
+nextButton.addEventListener("click", nextSlide);
+
+// Show the first slide initially
+showSlide(currentSlide);
+
 });
