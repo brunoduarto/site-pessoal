@@ -572,6 +572,60 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 /* --------------------------------------- */
+/* ----- Carousel Container----- */
+/* --------------------------------------- */
+/* Carousel Container */
+.work__carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Slides Container */
+.work__slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Individual Slide */
+.work__box {
+  flex: 0 0 100%;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.work__box.active {
+  opacity: 1;
+}
+
+/* Navigation Buttons */
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  color: var(--white);
+  font-size: var(--font-size-medium);
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.carousel__button:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.carousel__button--prev {
+  left: 1rem;
+}
+
+.carousel__button--next {
+  right: 1rem;
+}
+
+
+/* --------------------------------------- */
 /* ----- Footer ----- */
 /* --------------------------------------- */
 
