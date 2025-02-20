@@ -77,5 +77,4 @@ nextButton.addEventListener("click", nextSlide);
 
 // Show the first slide initially
 showSlide(currentSlide);
-
 });
