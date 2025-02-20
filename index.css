@@ -591,10 +591,12 @@ body:not(.user-is-tabbing) a:focus {
   flex: 0 0 100%;
   transition: opacity 0.5s ease-in-out;
   opacity: 0;
+  display: none; /* Hide all slides by default */
 }
 
 .work__box.active {
   opacity: 1;
+  display: flex; /* Show the active slide */
 }
 
 /* Navigation Buttons */
@@ -623,8 +625,6 @@ body:not(.user-is-tabbing) a:focus {
 .carousel__button--next {
   right: 1rem;
 }
-
-
 /* --------------------------------------- */
 /* ----- Footer ----- */
 /* --------------------------------------- */
