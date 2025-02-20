@@ -51,93 +51,79 @@
 
     <!-- ** Work ** -->
 
-    <section class="work" id="work">
-      <div class="row">
-        <h2>Meus Trabalhos</h2>
-        <div class="work__boxes">
-
-          <!-- Each div with the work__box class is a project. -->
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Portfolio Geral</h3>
-              <p>
-                Uma coleção dos meus projetos mais recentes, incluindo designs residenciais, comerciais e urbanísticos.
-              </p>
-              <ul class="work__list">
-                <li>Arquitetura Sustentável</li>
-                <li>Design de Interiores</li>
-                <li>Planejamento Urbano</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="#" class="link__text">
-                  Visitar Site <span>&rarr;</span>
-                </a>
-                <a href="#" title="Ver Código Fonte" target="_blank">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-1.png" class="work__image" alt="Projeto 1" />
+   <section class="work" id="work">
+  <div class="row">
+    <h2>Meus Trabalhos</h2>
+    <div class="work__carousel">
+      <!-- Carousel Slides -->
+      <div class="work__slides">
+        <div class="work__box active">
+          <div class="work__text">
+            <h3>Portfolio Geral</h3>
+            <p>Uma coleção dos meus projetos mais recentes, incluindo designs residenciais, comerciais e urbanísticos.</p>
+            <ul class="work__list">
+              <li>Arquitetura Sustentável</li>
+              <li>Design de Interiores</li>
+              <li>Planejamento Urbano</li>
+            </ul>
+            <div class="work__links">
+              <a href="#" class="link__text">Visitar Site <span>&rarr;</span></a>
+              <a href="#" title="Ver Código Fonte" target="_blank">
+                <img src="./images/github.svg" class="work__code" alt="GitHub">
+              </a>
             </div>
           </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Projetos Residenciais</h3>
-              <p>
-                Design de casas e apartamentos, com foco em funcionalidade e estética.
-              </p>
-              <ul class="work__list">
-                <li>Design de Interiores</li>
-                <li>Planejamento Espacial</li>
-                <li>Sustentabilidade</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="#" class="link__text">
-                  Visitar Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="Ver Código Fonte" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-2.png" class="work__image" alt="Projeto 2" />
+          <div class="work__image-box">
+            <img src="./images/project-1.png" class="work__image" alt="Projeto 1">
+          </div>
+        </div>
+        <div class="work__box">
+          <div class="work__text">
+            <h3>Projetos Residenciais</h3>
+            <p>Design de casas e apartamentos, com foco em funcionalidade e estética.</p>
+            <ul class="work__list">
+              <li>Design de Interiores</li>
+              <li>Planejamento Espacial</li>
+              <li>Sustentabilidade</li>
+            </ul>
+            <div class="work__links">
+              <a href="#" class="link__text">Visitar Site <span>&rarr;</span></a>
+              <a href="#">
+                <img src="./images/github.svg" class="work__code" title="Ver Código Fonte" alt="GitHub">
+              </a>
             </div>
           </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Projetos Comerciais</h3>
-              <p>
-                Desenvolvimento de espaços comerciais modernos e funcionais.
-              </p>
-              <ul class="work__list">
-                <li>Design de Lojas</li>
-                <li>Planejamento de Escritórios</li>
-                <li>Consultoria em Arquitetura</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="#" class="link__text">
-                  Visitar Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="Ver Código Fonte" alt="GitHub">
-                </a>
-              </div>
+          <div class="work__image-box">
+            <img src="./images/project-2.png" class="work__image" alt="Projeto 2">
+          </div>
+        </div>
+        <div class="work__box">
+          <div class="work__text">
+            <h3>Projetos Comerciais</h3>
+            <p>Desenvolvimento de espaços comerciais modernos e funcionais.</p>
+            <ul class="work__list">
+              <li>Design de Lojas</li>
+              <li>Planejamento de Escritórios</li>
+              <li>Consultoria em Arquitetura</li>
+            </ul>
+            <div class="work__links">
+              <a href="#" class="link__text">Visitar Site <span>&rarr;</span></a>
+              <a href="#">
+                <img src="./images/github.svg" class="work__code" title="Ver Código Fonte" alt="GitHub">
+              </a>
             </div>
-            <div class="work__image-box">
-              <img src="./images/project-3.png" class="work__image" alt="Projeto 3" />
-            </div>
+          </div>
+          <div class="work__image-box">
+            <img src="./images/project-3.png" class="work__image" alt="Projeto 3">
           </div>
         </div>
       </div>
-    </section>
+      <!-- Navigation Buttons -->
+      <button class="carousel__button carousel__button--prev">&larr;</button>
+      <button class="carousel__button carousel__button--next">&rarr;</button>
+    </div>
+  </div>
+</section>
 
     <!-- ** Clients ** -->
 
