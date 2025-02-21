@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   const projects = document.querySelectorAll('.work__project');
+  const prevButton = document.querySelector('.carousel__button--prev');
+  const nextButton = document.querySelector('.carousel__button--next');
   let currentIndex = 0;
-  const interval = 3000; // 3 seconds
 
   const showProject = (index) => {
     projects.forEach((project, i) => {
@@ -14,7 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
     showProject(currentIndex);
   };
 
-  setInterval(nextProject, interval);
+  const prevProject = () => {
+    currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+    showProject(currentIndex);
+  };
+
+  nextButton.addEventListener('click', nextProject);
+  prevButton.addEventListener('click', prevProject);
 
   // Show the first project initially
   showProject(currentIndex);
