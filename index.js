@@ -25,4 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Show the first project initially
   showProject(currentIndex);
+
+  // Test Button
+  const testButton = document.getElementById('testButton');
+  testButton.addEventListener('click', () => {
+    testButton.textContent = 'Button Clicked!';
+  });
 });

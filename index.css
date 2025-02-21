@@ -529,7 +529,7 @@ body:not(.user-is-tabbing) a:focus {
         padding: var(--gutter-normal);
     }
 
-    .client__logo:not(:last-of-type) {
+    .software__logo:not(:last-of-type) {
         margin-right: var(--gutter-medium);
     }
 }
