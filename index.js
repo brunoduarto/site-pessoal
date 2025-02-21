@@ -28,7 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Test Button
   const testButton = document.getElementById('testButton');
-  testButton.addEventListener('click', () => {
-    testButton.textContent = 'Button Clicked!';
-  });
+  if (testButton) {
+    console.log('Test button found');
+    testButton.addEventListener('click', () => {
+      console.log('Button clicked');
+      testButton.textContent = 'Button Clicked!';
+    });
+  } else {
+    console.log('Test button not found');
+  }
 });
