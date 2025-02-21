@@ -534,6 +534,33 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
+.software__list {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 0;
+}
+
+.software__logo {
+  flex: 0 0 auto;
+  margin-right: 20px;
+  height: 50px; /* Adjust as needed */
+}
+
+.software__logo:last-child {
+  margin-right: 0;
+}
+
+/* Optional: Hide scrollbar for a cleaner look */
+.software__list::-webkit-scrollbar {
+  display: none;
+}
+
+.software__list {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 /* --------------------------------------- */
 /* ----- About ----- */
 /* --------------------------------------- */
