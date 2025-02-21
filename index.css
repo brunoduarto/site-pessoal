@@ -512,19 +512,19 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Clients ----- */
 /* --------------------------------------- */
 
-.client__logos {
+.software__logos {
     display: flex;
     justify-content: space-between;
     filter: invert(100%) grayscale(100%) opacity(.8);
 }
 
-.client__logo {
+.software__logo {
     height: 6.5rem;
     max-width: 18rem;
 }
 
 @media(max-width: 1240px) {
-    .client__logos {
+    .software__logos {
         overflow-x: scroll;
         padding: var(--gutter-normal);
     }
@@ -627,6 +627,46 @@ body:not(.user-is-tabbing) a:focus {
 
 .carousel__button--next {
   right: 1rem;
+}
+
+/* --------------------------------------- */
+/* ----- Work Projects ----- */
+/* --------------------------------------- */
+
+.work__projects {
+  position: relative;
+  height: 400px; /* Adjust as needed */
+}
+
+.work__project {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.work__project.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.work__project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work__project-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 /* --------------------------------------- */
